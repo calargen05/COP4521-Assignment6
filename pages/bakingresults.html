@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th scope="col">Entry Id</th>
+        <th scope="col">User Id</th>
+        <th scope="col">Name Of Baking Item</th>
+        <th scope="col">Number of Excellent Votes</th>
+        <th scope="col">Number of Ok Votes</th>
+        <th scope="col">Number of Bad Votes</th>
+      </tr>
+
+      {% for e in entries %}
+      <tr>
+        <td>{{e.entry_id}}</td>
+        <td>{{e.user_id}}</td>
+        <td>{{e.item_name}}</td>
+        <td>{{e.num_excellent}}</td>
+        <td>{{e.num_ok}}</td>
+        <td>{{e.num_bad}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+    <a href="/">Go back to home page</a>
+  </body>
+</html>

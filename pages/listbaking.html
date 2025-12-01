@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Security Level</th>
+        <th scope="col">Login Password</th>
+      </tr>
+
+      {% for u in users %}
+      <tr>
+        <td>{{u.name}}</td>
+        <td>{{u.age}}</td>
+        <td>{{u.phone}}</td>
+        <td>{{u.security_level}}</td>
+        <td>{{u.login_password}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+    <a href="/">Go back to home page</a>
+  </body>
+</html>
