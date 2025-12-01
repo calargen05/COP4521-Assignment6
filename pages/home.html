@@ -1,16 +1,15 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <h1>Welcome</h1>
-    <ul>
-      <li><h2><a href="/add_user">New Baking</a></h2></li>
-      <li><h2><a href="/list_users">List Baking</a></h2></li>
-      <li><h2><a href="/list_results">Baking Results</a></h2></li>
-    </ul>
-  </body>
-</html>
+<!doctype html><html><body>
+  <h1>Welcome, {{ username }}</h1>
+  <ul>
+    <li><a href="{{ url_for('my_entries') }}">Show my Contest Entry Results</a></li>
+    <li><a href="{{ url_for('add_entry') }}">Add new Baking Contest Entry</a></li>
+    {% if level >= 2 %}
+      <li><a href="{{ url_for('list_users') }}">List Baking Contest Users</a></li>
+    {% endif %}
+    {% if level >= 3 %}
+      <li><a href="{{ url_for('add_user_admin') }}">Add new Baking Contest User</a></li>
+      <li><a href="{{ url_for('list_results') }}">Baking Contest Entry Results</a></li>
+    {% endif %}
+    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+  </ul>
+</body></html>

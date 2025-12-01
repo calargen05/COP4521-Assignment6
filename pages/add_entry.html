@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Baking Contest User Information</h1>
+    <form action="/add_entry" method="post">
+      <label for="item_name">Name of Baking Item:</label><br>
+      <input type="text" id="item_name" name="item_name"><br><br>
+      <label for="num_excellent">Number of Excellent Votes:</label><br>
+      <input type="number" id="num_excellent" name="num_excellent"><br><br>
+      <label for="num_ok">Number of Ok Votes:</label><br>
+      <input type="number" id="num_ok" name="num_ok"><br><br>
+      <label for="num_bad">Number of Bad Votes:</label><br>
+      <input type="number" id="num_bad" name="num_bad"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

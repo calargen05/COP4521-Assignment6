@@ -1,12 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Result</title>
-</head>
-<body>
-    <p>Query Result: {{ msg|safe }}</p>
+<!doctype html><html><body>
+  <h1>Result</h1>
+  <div>{{ msg|safe }}</div>
+  <a href="{{ url_for('home') }}">Home</a> | <a href="{{ url_for('logout') }}">Logout</a>
+</body></html>
 
-    <a href="/">Return Home</a>
-</body>
-</html>
